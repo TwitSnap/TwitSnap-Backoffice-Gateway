@@ -1,0 +1,24 @@
+# Gateway Configuration:
+server:
+  port: ${SERVER_PORT}
+
+# Gateway Routes:
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: Auth-[auth,logIn,register,password]
+          uri: ${AUTH_MS_URI}
+          predicates:
+            - Path=/v1/auth/**
+
+        # Lo dejo de ejemplo de como se usa AuthFilter
+        - id: Users-[users]
+          uri: ${USERS_MS_URI}
+          predicates:
+            - Path=/api/v1/users/**
+          filters:
+            - AuthFilter
+            
+
+
