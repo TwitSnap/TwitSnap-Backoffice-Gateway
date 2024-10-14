@@ -12,7 +12,6 @@ spring:
           cors-configurations:
             '[/**]':
               allowed-origin-patterns:
-                - "*"
                 - "https://twitsnap-backoffice-g8xi.onrender.com"
               allowed-methods: "*"
               allowed-headers: "*"
