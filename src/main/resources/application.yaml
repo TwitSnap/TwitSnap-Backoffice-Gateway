@@ -15,9 +15,6 @@ spring:
               - POST
               - PUT
               - DELETE
-            allowedHeaders:
-              - Content-Type
-              - Authorization
       routes:
         - id: Auth-[auth,logIn,register,password]
           uri: ${AUTH_MS_URI}
