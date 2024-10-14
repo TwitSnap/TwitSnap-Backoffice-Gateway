@@ -11,11 +11,8 @@ spring:
       globalcors:
           cors-configurations:
             '[/**]':
-              allowed-origin-patterns:
-                - "https://twitsnap-backoffice-g8xi.onrender.com"
               allowed-methods: "*"
               allowed-headers: "*"
-              allow-credentials: true
       routes:
         - id: Auth-[auth,logIn,register,password]
           uri: ${AUTH_MS_URI}
