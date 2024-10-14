@@ -13,6 +13,7 @@ spring:
             '[/**]':
               allowed-methods: "*"
               allowed-headers: "*"
+              allow-credentials: true
       routes:
         - id: Auth-[auth,logIn,register,password]
           uri: ${AUTH_MS_URI}
