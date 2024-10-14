@@ -6,6 +6,18 @@ server:
 spring:
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: '*' #Deberia ser el dominio del front
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders:
+              - Content-Type
+              - Authorization
       routes:
         - id: Auth-[auth,logIn,register,password]
           uri: ${AUTH_MS_URI}
