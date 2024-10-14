@@ -12,9 +12,7 @@ public class CorsGlobalConfiguration{
     @Bean
     public CorsWebFilter corsWebFilter(){
         CorsConfiguration corsConfig = new CorsConfiguration();
-        System.out.println(corsConfig.getAllowedOrigins());
         corsConfig.addAllowedOrigin("https://twitsnap-backoffice-g8xi.onrender.com");
-        System.out.println(corsConfig.getAllowedOrigins());
         corsConfig.addAllowedHeader("*");
         corsConfig.addAllowedMethod("*");
         corsConfig.setAllowCredentials(true);
