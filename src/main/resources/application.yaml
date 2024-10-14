@@ -5,17 +5,6 @@ server:
 spring:
   cloud:
     gateway:
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
-      globalcors:
-          cors-configurations:
-            '[/**]':
-              allowed-origin-patterns:
-                - "https://twitsnap-backoffice-g8xi.onrender.com"
-              allowed-methods: "*"
-              allowed-headers: "*"
-              allow-credentials: false
-
       # Gateway Routes:
       routes:
         - id: Auth-[auth,logIn,register,password]
