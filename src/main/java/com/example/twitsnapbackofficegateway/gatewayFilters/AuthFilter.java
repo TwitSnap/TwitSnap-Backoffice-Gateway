@@ -1,4 +1,4 @@
-package com.example.twitsnapgateway.gatewayFilters;
+package com.example.twitsnapbackofficegateway.gatewayFilters;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
