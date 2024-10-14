@@ -9,17 +9,12 @@ spring:
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: '*' #Deberia ser el dominio del front
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-            allowedHeaders:
-              - '*'
-            allowCredentials: true
+          cors-configurations:
+            '[/**]':
+              allowed-origins: "*"
+              allowed-methods: "*"
+              allowed-headers: "*"
+              allow-credentials: true
       routes:
         - id: Auth-[auth,logIn,register,password]
           uri: ${AUTH_MS_URI}
