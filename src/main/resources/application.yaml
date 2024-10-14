@@ -2,7 +2,6 @@
 server:
   port: ${SERVER_PORT}
 
-# Gateway Routes:
 spring:
   cloud:
     gateway:
@@ -11,9 +10,13 @@ spring:
       globalcors:
           cors-configurations:
             '[/**]':
+              allowed-origin-patterns:
+                - "https://twitsnap-backoffice-g8xi.onrender.com"
               allowed-methods: "*"
               allowed-headers: "*"
-              allow-credentials: true
+              allow-credentials: false
+
+      # Gateway Routes:
       routes:
         - id: Auth-[auth,logIn,register,password]
           uri: ${AUTH_MS_URI}
