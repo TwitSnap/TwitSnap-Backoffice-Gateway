@@ -11,6 +11,11 @@ spring:
           uri: ${AUTH_MS_URI}
           predicates:
             - Path=/v1/auth/**
+
+        - id: TwitSnapAPIs-[TwitSnapAPIs]
+          uri: ${TWITSNAP_MS_URI}
+          predicates:
+            - Path=/v1/ts/**
             
 
 
