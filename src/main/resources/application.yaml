@@ -16,6 +16,8 @@ spring:
           uri: ${TWITSNAP_MS_URI}
           predicates:
             - Path=/v1/ts/**
+          filters:
+            - AuthFilter
             
 
 
